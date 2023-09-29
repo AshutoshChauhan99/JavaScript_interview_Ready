@@ -84,10 +84,24 @@ Array.prototype.myReduce = function (cb, initailValue) {
 
 const numArr = [1, 2, 3, 4]
 
-const sum = numArr.myReduce ((acc, curr, i, arr) => {
+const sum = numArr.myReduce((acc, curr, i, arr) => {
     return acc + curr;
 }, 0)
 
 console.log(sum)
 
 // map vs forEach 
+
+const newArr = [1, 2, 3, 4]
+
+
+const mapResult = arr.map((num, i, arr) => {
+    return num + 2// return new array
+})
+
+const forEachResult = arr.forEach((num, i) => {
+    newArr[i] = num + 2; // return modified old array
+})
+
+
+console.log(mapResult, forEachResult, newArr)
