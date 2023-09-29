@@ -105,3 +105,34 @@ const forEachResult = arr.forEach((num, i) => {
 
 
 console.log(mapResult, forEachResult, newArr)
+
+
+// map filter output based questin
+// question1
+let students = [
+    { name: "Ashutosh", rollNumber: 31, marks: 80 },
+    { name: "Ashok", rollNumber: 32, marks: 50 },
+    { name: "Anshu", rollNumber: 33, marks: 90 },
+    { name: "Anurag", rollNumber: 34, marks: 37 }
+]
+
+
+
+//for loop method
+//let names = [];
+// for (let i = 0; i < students.length; i++) {
+//     names.push(students[i].name.toUpperCase())
+// }
+
+const names = students.map((stu) => stu.name.toUpperCase())
+
+
+console.log(names)
+
+
+const aboveSixty = students.filter((stu) => stu.marks > 60)
+console.log(aboveSixty)
+
+
+const totalMarks = students.reduce((accu, curr) => accu + curr.marks, 0)
+console.log(totalMarks)
